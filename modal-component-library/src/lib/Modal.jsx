@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react"
 import styled from "styled-components"
 
-export default function Modal({children, openModal = false, hasCloseButton = true}){
+export default function Modal({className, children, modalState, hasCloseButton = true, closeButtonClassName, closeButtonChild, onClose}){
 
-    const [isHidden, setIsHidden] = useState(!openModal)
+   
+    const [openModal, setOpenModal] = modalState
 
-    useEffect(() => {
-        if(typeof openModal === "boolean"){
-            setIsHidden(!openModal)
-        }
-    },[openModal])
-    
+    if(typeof onClose !== "function"){
+        onClose = () => setOpenModal(false)
+    }
 
     return ( 
-        <Container className="modal-container" isHidden={isHidden}>
+        <Container className={className} openModal={openModal}>
+            {hasCloseButton && <button className={closeButtonClassName} onClick={onClose}>{closeButtonChild}</button> }
             {children}
         </Container>
     )
@@ -21,6 +19,6 @@ export default function Modal({children, openModal = false, hasCloseButton = tru
 
 const Container = styled.div`
 
-    display: ${({isHidden}) => isHidden ? "none" : "block"}
+    display: ${({openModal}) => openModal ? "block" : "none"}
 
 `
