@@ -15,8 +15,8 @@ export default function TestModal(){
             <StyledModal 
                 modalState={[openModal, setOpenModal]} 
                 className = "modal-wrapper" 
-                closeButtonChild= {  <StyledDiv>Close</StyledDiv>
-                 }
+                closeButtonChild= {<StyledDiv>Close</StyledDiv>}
+                closeButtonClassName="modal-close-button"
                 >
                 <h2>Hello</h2>
             </StyledModal>
@@ -27,7 +27,12 @@ export default function TestModal(){
 const StyledModal = styled(Modal)`
 
     color : red;
-    border: 2px solid black;
+    border: 2px solid black;    
+
+    .modal-close-button{
+        border: none;
+        background-color: white;
+    }
 
 `
 

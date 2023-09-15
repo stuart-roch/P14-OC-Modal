@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Modal from "./lib/Modal";
-import styled from "styled-components"
 import TestModal from "./TestModal";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

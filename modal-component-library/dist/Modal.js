@@ -8,6 +8,7 @@ exports.default = Modal;
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/taggedTemplateLiteral"));
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/slicedToArray"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _react = _interopRequireDefault(require("react"));
 var _templateObject;
 function Modal(_ref) {
   var className = _ref.className,
@@ -26,10 +27,10 @@ function Modal(_ref) {
       return setOpenModal(false);
     };
   }
-  return /*#__PURE__*/React.createElement(Container, {
+  return /*#__PURE__*/_react.default.createElement(Container, {
     className: className,
     openModal: openModal
-  }, hasCloseButton && /*#__PURE__*/React.createElement("button", {
+  }, hasCloseButton && /*#__PURE__*/_react.default.createElement("button", {
     className: closeButtonClassName,
     onClick: onClose
   }, closeButtonChild), children);

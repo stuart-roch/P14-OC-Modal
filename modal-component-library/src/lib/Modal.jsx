@@ -1,6 +1,15 @@
 import styled from "styled-components"
+import React from "react"
 
-export default function Modal({className, children, modalState, hasCloseButton = true, closeButtonClassName, closeButtonChild, onClose}){
+export default function Modal(
+    {className, 
+    children,
+    modalState,
+    hasCloseButton = true,
+    closeButtonClassName,
+    closeButtonChild,
+    onClose}
+    ){
 
    
     const [openModal, setOpenModal] = modalState
