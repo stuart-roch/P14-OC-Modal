@@ -9,25 +9,29 @@ export default function TestModal(){
     const onClose = () => setOpenModal(false)
 
     return (
-        <>
+        <Container>
             <button className="trigger-modal" onClick={() => setOpenModal(true)}>Open Modal</button>
 
-            <StyledModal 
+            <Modal 
                 modalState={[openModal, setOpenModal]} 
                 className = "modal-wrapper" 
                 closeButtonChild= {<StyledDiv>Close</StyledDiv>}
                 closeButtonClassName="modal-close-button"
                 >
                 <h2>Hello</h2>
-            </StyledModal>
-        </>
+            </Modal>
+        </Container>
     )
 }
 
-const StyledModal = styled(Modal)`
+const Container = styled.div`
 
-    color : red;
-    border: 2px solid black;    
+    .modal-wrapper{
+        color : red;
+        border: 2px solid black;
+        display: flex;
+    }
+        
 
     .modal-close-button{
         border: none;

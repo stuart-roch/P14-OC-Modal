@@ -28,6 +28,6 @@ export default function Modal(
 
 const Container = styled.div`
 
-    display: ${({openModal}) => openModal ? "block" : "none"}
+    display: ${({openModal}) => openModal ? "block !important" : "none !important"}
 
 `
