@@ -19,7 +19,7 @@ export default function Modal(
     }
 
     return ( 
-        <Container className={className} openModal={openModal}>
+        <Container className={className} $openModal={openModal}>
             {hasCloseButton && <button className={closeButtonClassName} onClick={onClose}>{closeButtonChild}</button> }
             {children}
         </Container>
@@ -28,6 +28,6 @@ export default function Modal(
 
 const Container = styled.div`
 
-    display: ${({openModal}) => openModal ? "block !important" : "none !important"}
+    display: ${(props) => props.$openModal ? "block !important" : "none !important"}
 
 `
