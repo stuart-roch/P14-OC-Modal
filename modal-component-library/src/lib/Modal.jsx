@@ -59,7 +59,7 @@ const Container = styled.div`
     right: 0;
     z-index: 1;
     
-    div{
+    > div{
         border: 1px solid black;
         width: 50%;
         height: 50%;
@@ -67,11 +67,15 @@ const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        button:last-child{
+            border-radius: 25px;
+            padding: 10px;
+            background-color: transparent;
+        }
     }
 
-    button{
-        border-radius: 25px;
-        padding: 10px;
-        background-color: transparent;
-    }
+    
+
+    
 `

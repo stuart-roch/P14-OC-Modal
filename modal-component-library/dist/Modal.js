@@ -51,6 +51,6 @@ function Modal(_ref) {
     onClick: onClose
   }, closeButtonChild === undefined ? "Close" : closeButtonChild)));
 }
-var Container = _styledComponents.default.div(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n\n    display: ", "\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 1;\n    \n    div{\n        border: 1px solid black;\n        width: 50%;\n        height: 50%;\n        display: flex;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n    }\n\n    button{\n        border-radius: 25px;\n        padding: 10px;\n        background-color: transparent;\n    }\n"])), function (props) {
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n\n    display: ", "\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 1;\n    \n    > div{\n        border: 1px solid black;\n        width: 50%;\n        height: 50%;\n        display: flex;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n\n        button:last-child{\n            border-radius: 25px;\n            padding: 10px;\n            background-color: transparent;\n        }\n    }\n\n    \n\n    \n"])), function (props) {
   return props.$openModal ? "block !important;" : "none !important;";
 });

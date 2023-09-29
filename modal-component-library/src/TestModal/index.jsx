@@ -16,7 +16,8 @@ export default function TestModal(){
                 modalState={[openModal, setOpenModal]} 
                 className = "modal-wrapper" 
                 >
-                    <p>Hello World!</p>
+                    <div>Hello World!</div>
+                    <button>Test</button>
             </Modal>
         </Container>
     )
