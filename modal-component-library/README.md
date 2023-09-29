@@ -19,12 +19,24 @@ You can use it like a standard react component et style it with styled-component
 |:---:|:---:|:---:|:---:|:---:|
 | className | string | none | yes | ClassName of the Modal Container |
 | modalState | list | none | yes | React State that control the render |
+| modalContentDivClassName | string | none | no | ClassName of the Modal content container |
 | hasCloseButton | boolean | true | no | The component has a close button included |
 | closeButtonClassName | string | none | no | Included close button classname |
 | closeButtonChild | HTMLElement or React Component | none | no | Included close button child |
 | onClose | function | close the modal | no | Function called when you click on the close button |
 
+#### Modal Structure 
 
+The name of class are just examples
+
+```html
+<div class="container">
+    <div class="content-container">
+        "Your Content"
+        <button>Close</button>
+    </div>
+</div>
+```
 ### Example 1 : Default use
 
 ```React
