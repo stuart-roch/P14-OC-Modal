@@ -14,7 +14,8 @@ export default function TestModal(){
 
             <Modal 
                 modalState={[openModal, setOpenModal]} 
-                className = "modal-wrapper" 
+                className = "modal-wrapper"
+                closeButtonChild="Test"
                 >
                     <div>Hello World!</div>
                     <button>Test</button>

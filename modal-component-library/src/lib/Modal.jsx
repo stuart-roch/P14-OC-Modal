@@ -67,6 +67,13 @@ const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-shadow: 10px 10px 10px #D9D9D9;
+        border-radius: 25px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
 
         button:last-child{
             border-radius: 25px;
