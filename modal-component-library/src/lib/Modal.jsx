@@ -1,6 +1,6 @@
 /** 
  * @author ROCH Stuart
- * @version 0.1.13
+ * @version 0.1.14
  */
 
 import styled from "styled-components"
@@ -81,16 +81,18 @@ const Container = styled.div`
 
         button:last-child{
             margin-top: 20px;
-            border: 1px solid #D9D9D9;
+            border: 1px solid #B1B1B1;
             padding: 10px;
-            background-color: #D9D9D9;
+            background-color: #B1B1B1;
             align-self: end;
             border-radius: 5px;
             opacity: 0.8;
+            font-weight: bold;
         }
 
         button:last-child:hover{
             opacity: 1;
+            
         }
 
 
