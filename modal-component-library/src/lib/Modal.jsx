@@ -1,16 +1,20 @@
+/** 
+ * @author ROCH Stuart
+ * @version 0.1.13
+ */
+
 import styled from "styled-components"
 import React from "react"
 
 /**
- * Create a React Component
+ * Create a Modal React Component
  *  
  * @param {string} className - Class of the modal container
  * @param {[boolean, function()]} modalState - React State from the parent component that render the modal
  * @param {string} [modalContentDivClassName] - Class of the modal content container
- * @param {HTMLElement or ReactComponent}  [children] - Content between opening and closing tag 
  * @param {boolean} [hasCloseButton=true] - Indicate if the modal has a close button with a default value at true
  * @param {string} [closeButtonClassName] - Class of the close button
- * @param {HTMLElement or ReactComponent} [closeButtonChild] - Content between opening and closing tag of the close Button
+ * @param {HTMLElement|ReactComponent} [closeButtonChild] - Content between opening and closing tag of the close Button
  * @param {function} [onClose] - Function executed on the click of the close button
  * @returns {ReactComponent} - A Modal React Component
  */
@@ -45,8 +49,10 @@ export default function Modal(
     )
 }
 
-
-
+/**
+ * Style the elements of the modal using styled-components lib
+ * @type {ReactComponent}
+ */
 const Container = styled.div`
 
     display: ${(props) => props.$openModal ? "block !important;" : "none !important;"}
@@ -62,13 +68,11 @@ const Container = styled.div`
     > div{
         border: 1px solid black;
         width: 50%;
-        height: 50%;
+        height: fit-content;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         box-shadow: 10px 10px 10px #D9D9D9;
-        border-radius: 25px;
+        border-radius: 10px;
         position: relative;
         top: 50%;
         left: 50%;
@@ -76,10 +80,20 @@ const Container = styled.div`
         padding: 20px;
 
         button:last-child{
-            border-radius: 25px;
+            margin-top: 20px;
+            border: 1px solid #D9D9D9;
             padding: 10px;
-            background-color: transparent;
+            background-color: #D9D9D9;
+            align-self: end;
+            border-radius: 5px;
+            opacity: 0.8;
         }
+
+        button:last-child:hover{
+            opacity: 1;
+        }
+
+
     }
 
     
